@@ -1,0 +1,375 @@
+/* General Styles */
+body {
+    font-size: 1em;
+    /* Use a relative font size (percentage or em) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    width: 90%;
+    height: 100%;
+}
+
+/* Media Query for Small Screen Sizes */
+@media (max-width: 768px) {
+
+    /* Adjust header styles for small screens */
+    .nav-bar {
+        display: none;
+        /* Hide the navigation links */
+    }
+
+    .logo-section {
+        width: 100%;
+        /* Make the logo section occupy the full width */
+        text-align: center;
+        /* Center align the logo and home-link */
+    }
+
+    #title {
+        font-size: 20px;
+        /* Reduce the font size of the title for small screens */
+    }
+
+    #logo {
+        margin: 10px auto;
+        /* Center align the logo for small screens */
+    }
+
+    /* ... Other CSS adjustments for small screens ... */
+}
+
+/* Another Media Query for Extra Small Screen Sizes */
+@media (max-width: 576px) {
+
+    /* Further adjustments for extra small screens */
+    .header-text-wrap {
+        flex-direction: column;
+        /* Stack header text and image in a column */
+    }
+
+    .img-wrap {
+        justify-content: center;
+        /* Center align the image for small screens */
+    }
+
+    #header-image {
+        max-width: 100%;
+        /* Adjust the image width to fit the screen */
+    }
+
+    /* ... Other CSS adjustments for extra small screens ... */
+}
+
+
+/* Color Variables */
+:root {
+    --main-body: white;
+    --main-green: rgb(39, 66, 66, 0.8);
+    --main-text: rgb(0, 255, 255);
+    --main-grey: rgb(128, 128, 128, 0.6);
+    --main-btn: rgb(28, 238, 214);
+    --main-btn-secondary: rgb(39, 66, 66);
+
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 2em;
+}
+
+.nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10%;
+    background-color: var(--main-green);
+    color: var(--main-body);
+    padding: 10px 5px;
+}
+
+.logo-section {
+    width: 30%;
+    overflow: auto;
+}
+
+#title {
+    font-size: 1.7rem;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    display: inline;
+}
+
+.home-link {
+    text-decoration: none;
+    color: var(--main-body);
+}
+
+#logo {
+    width: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 2px 3px 2px var(--main-body);
+}
+
+.nav-bar {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+nav a {
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--main-body);
+}
+
+a:hover {
+    color: var(--main-text);
+}
+
+.aside {
+    text-align: right;
+}
+
+/* Main Content Styles */
+main {
+    position: relative;
+    max-width: 100%;
+    width: 90%;
+    height: 100%;
+    margin: 90px 20px auto;
+    right: 2rem;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header Banner Styles */
+.header-banner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header-text-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: absolute;
+    left: 5rem;
+    top: 1rem;
+    margin: 10px auto;
+}
+
+.header-text {
+    width: 50%;
+    height: 250px;
+}
+
+.text-header {
+    font-size: 2rem;
+    margin: 15px auto 10px 15px;
+}
+
+.small-text {
+    font-size: 1.3rem;
+    margin: 0 auto 15px 20px;
+    color: var(--main-grey);
+}
+
+.button-wrap-1{
+    position: absolute;
+    top: 12rem;
+    left: 1em;
+    padding: 20px;
+}
+
+#get_started, .btn-se_1{
+    background-color: var(--main-btn-secondary);
+    color: var(--main-btn);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#get_started:hover {
+    color: rgb(39, 66, 66);
+    background-color: rgb(28, 238, 214);
+    box-shadow: 2px 2px 3px rgb(39, 66, 66);
+}
+
+.img-wrap {
+    display: flex;
+    justify-content: flex-end;
+    width: 400px;
+    margin: 10px auto;
+    position: relative;
+}
+
+#header-image {
+    width: 75%;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 0.075rem;
+}
+
+/* Body Text Styles */
+.body-text {
+    max-width: 80%;
+    width: 70%;
+    height: 30vh;
+    position: absolute;
+    top: 17rem;
+    left: 5rem;
+    margin: 40px auto;
+    padding-left: 10px;
+    border: 2px 2px 3px solid;
+}
+.body-text > h2 {
+    font-size: 1.7rem;
+    margin-left: 30px;
+    color: var(--main-btn-secondary);
+}
+
+.minor {
+    margin: 0 auto;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+.minor h2 {
+    color: var(--main-btn-secondary);
+}
+
+.minor_sub {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.minor_sub > h3 {
+    color: var(--main-text);
+    margin: 0 10px 15px 15px;
+}
+
+.minor-text {
+    margin: 0 auto;
+}
+
+/* Search Wrap Styles */
+.search-wrap {
+    width: 100%;
+    height: 10vh;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    position: absolute;
+    top: 30em;
+    left: 2.4rem;
+}
+
+.search-nav {
+    background-color: rgb(39, 66, 66);
+    color: rgb(255, 255, 255);
+    padding: 10px 32px;
+    font-size: 24px;
+    margin: 20px;
+    border-radius: 0.1rem;
+    width: 100%;
+    position: absolute;
+    height: 200px;
+    
+}
+
+.search-nav-title {
+    margin: 10px auto;
+    text-align: center;
+    color: var(--main-btn);
+}
+
+.search-bar {
+    width: 100%;
+    display: inline-flex;
+}
+
+.nav-bar-1 {
+    margin-left: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-location {
+    width: 80%;
+    margin: 20px 20px;
+    color: black;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 0.1rem;
+    border: none;
+}
+
+.nav-bar-4 {
+    display: absolute;
+    left: 17em;
+    top: 5em;
+    margin-left: 15px;
+}
+
+.btn-se_1 {
+    margin: 10px 20px;
+    justify-content: center;
+    width: 10rem;
+    height: 2.5rem;
+    background-color: var(--main-btn);
+    color: var(--main-btn-secondary);
+    font-weight: 800;
+    
+}
+
+.btn-se_1:hover {
+    background-color: var(--main-btn-secondary);
+    color: var(--main-btn);
+    box-shadow: 2px 3px 2px 3px var(--main-btn);
+}
+
+.footer-wrap {
+    width: 100%;
+    margin-top: 40px;
+    height: 50px;
+    position: absolute;
+    background-color: azure;
+    top: 50em;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    margin: 0 auto;
+    width: 50%;
+    height: 50px;
+    display: flex;
+    background-color: black;
+}
+
+.copy {
+    width: 100%;
+    margin: 20px auto;
+
+}
